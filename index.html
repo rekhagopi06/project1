@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>S.A. Engineering College Hackathon</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        header {
+            background-color: #0056b3; /* Primary color */
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 1rem;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #007bff; /* Accent color for hover effect */
+            color: white;
+        }
+
+        .hero-section {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 4rem;
+        }
+
+        .hero-section img {
+            width: 70%;
+            max-width: 800px;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        .hero-section h2 {
+            font-size: 2.5rem;
+            color: #0056b3; /* Primary color for heading */
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .countdown {
+            font-size: 2rem;
+            color: #d9534f; /* Red color for countdown */
+            margin-top: 1.5rem;
+        }
+
+        .about, .schedule, .registration {
+            padding: 3rem 1.5rem;
+            text-align: center;
+            background-color: #ffffff; /* White background for sections */
+            border-top: 2px solid #0056b3; /* Blue border for section divider */
+        }
+
+        .about h2, .schedule h2, .registration h2 {
+            color: #0056b3; /* Primary color for section headings */
+        }
+
+        .about img, .schedule img, .registration img {
+            width: 80%;
+            max-width: 600px;
+            margin-top: 2rem;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #007bff; /* Accent blue for button */
+            color: white;
+            font-size: 1rem;
+            padding: 1rem 2rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue for button hover */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>S.A. Engineering College Hackathon</h1>
+        <p>Innovate, Code, and Compete for Glory!</p>
+    </header>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#about">About</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#registration">Registration</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h2>Join the Ultimate Coding Challenge</h2>
+        <p>Get ready to code, collaborate, and innovate. A weekend of fun, challenges, and prizes awaits you!</p>
+        <div class="countdown">
+            <p>Hackathon Begins In:</p>
+            <div id="countdown-timer">00:00:00</div>
+        </div>
+        <img src="saecwall3.jpg" alt="Hackathon Image">
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About the Hackathon</h2>
+        <p>This year’s hackathon at S.A. Engineering College brings together bright minds, developers, and enthusiasts to create innovative solutions. Whether you’re a beginner or a pro, come and be a part of something big!</p>
+        <img src="https://via.placeholder.com/600x300" alt="About the Event">
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule" id="schedule">
+        <h2>Event Schedule</h2>
+        <ul>
+            <li><strong>Day 1:</strong> Introduction & Team Formation | Workshops | Coding Begins</li>
+            <li><strong>Day 2:</strong> Coding Continues | Mentorship Sessions | Finalizing Projects</li>
+            <li><strong>Day 3:</strong> Presentations | Judging | Prize Distribution</li>
+        </ul>
+        <img src="https://via.placeholder.com/600x300" alt="Event Schedule">
+    </section>
+
+    <!-- Registration Section -->
+    <section class="registration" id="registration">
+        <h2>Register Now!</h2>
+        <p>Don’t miss out on this amazing opportunity. Register now and secure your spot for the hackathon!</p>
+        <button><a href="https://www.saec.edu.in/register" style="text-decoration: none; color: white;">Register Here</a></button>
+        <img src="https://via.placeholder.com/600x300" alt="Registration Image">
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 S.A. Engineering College. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        const countdownTimer = document.getElementById('countdown-timer');
+        const eventDate = new Date("March 30, 2025 09:00:00").getTime();
+        
+        setInterval(function() {
+            let now = new Date().getTime();
+            let distance = eventDate - now;
+            
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            countdownTimer.innerHTML = hours + ":" + minutes + ":" + seconds;
+            
+            if (distance < 0) {
+                clearInterval();
+                countdownTimer.innerHTML = "Event Started!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
+
+
+

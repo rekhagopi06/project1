@@ -1,0 +1,67 @@
+<!-- About Section -->
+    <section class="about" id="about">
+        <h2>About the Hackathon</h2>
+        <p>This year’s hackathon at S.A. Engineering College brings together bright minds, developers, and enthusiasts to create innovative solutions. Whether you’re a beginner or a pro, come and be a part of something big!</p>
+        <img src="C:\Users\Toshiba\Downloads\poster.jfif" alt="About the Event">
+    </section>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    color: #666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    text-align: left;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}

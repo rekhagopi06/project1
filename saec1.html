@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -150,13 +148,42 @@
         </div>
         <img src="https://via.placeholder.com/800x400" alt="Hackathon Image">
     </section><!-- About Section -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Event</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #poster {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
     <section class="about" id="about">
         <h2>About the Hackathon</h2>
-        <p>This year’s hackathon at S.A. Engineering College brings together bright minds, developers, and enthusiasts to create innovative solutions. Whether you’re a beginner or a pro, come and be a part of something big!</p>
-        <img src="C:\Users\Toshiba\Downloads\poster.jfif" alt="About the Event">
-        
+        <p>This year’s hackathon at S.A. Engineering College brings together brilliant minds.</p>
+
+        <button onclick="showPoster()">Show Poster</button>
+        <div id="poster">
+            <a href="poster.jfif" style="text-decoration: none; color: rgb(121, 29, 29);">click here</a>
+            <img src="c:\Users\Toshiba\Pictures\poster.jfif" alt="Poster Image" width="600">
+        </div>
     </section>
 
+    <script>
+        function showPoster() {
+            document.getElementById("poster").style.display = "block";
+        }
+    </script>
+
+</body>
+
+    
 
     
     
@@ -205,3 +232,4 @@
     </script>
 </body>
 </html>
+<
